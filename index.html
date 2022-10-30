@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Links -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        background-color: beige;
+      }
+      /* The hero image */
+      .hero-image {
+        /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("./programmer.jpg");
+
+        /* Set a specific height */
+        height: 100vh;
+
+        /* Position and center the image to scale nicely on all screens */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+
+      /* Place text in the middle of the image */
+      .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }
+    </style>
+    <title>TheCodingBarista</title>
+  </head>
+  <body>
+    <!-- SVG REFERENCE -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="bootstrap" viewBox="0 0 118 94">
+        <title>Bootstrap</title>
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+        ></path>
+      </symbol>
+      <symbol id="home" viewBox="0 0 16 16">
+        <path
+          d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"
+        ></path>
+      </symbol>
+      <symbol id="speedometer2" viewBox="0 0 16 16">
+        <path
+          d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"
+        ></path>
+        <path
+          fill-rule="evenodd"
+          d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"
+        ></path>
+      </symbol>
+      <symbol id="table" viewBox="0 0 16 16">
+        <path
+          d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"
+        ></path>
+      </symbol>
+      <symbol id="people-circle" viewBox="0 0 16 16">
+        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+        <path
+          fill-rule="evenodd"
+          d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+        ></path>
+      </symbol>
+      <symbol id="grid" viewBox="0 0 16 16">
+        <path
+          d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"
+        ></path>
+      </symbol>
+    </svg>
+
+    <!-- NAV BAR -->
+    <div
+      class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-light box-shadow justify-content-between"
+    >
+      <!-- <h5 class="my-0 mr-md-auto font-weight-normal">TheCodingBarista</h5> -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+        width="272px"
+        height="50px"
+        viewBox="-0.5 -0.5 272 71"
+        content='&lt;mxfile host="app.diagrams.net" modified="2022-10-30T09:19:47.424Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.52" etag="s26cxBWEWO20CsAw7H9m" version="20.1.2" type="device"&gt;&lt;diagram id="ATdujPSlz-WAlojo0C0D" name="Page-1"&gt;jZPBbsIwDIafpsdJkG50HNcOtsN2gQl2zRrTZEpjFEJb9vRzV5dSIaRdquSL89v57UZxVjYvXu71OyqwkZioJoqfIyHm4p6+LTh14CGZd6DwRnVoOoC1+QGGE6ZHo+AwCgyINpj9GOboHORhxKT3WI/DdmjHWfeygCuwzqW9plujgu7oo0gG/gqm0H3m6YzfV8o+mF9y0FJhfYHiRRRnHjF0q7LJwLbe9b5095Y3Ts+FeXDhPxdOVbUq4c3oXbYR28+v781ydccqlbRHfvCHhgyVcUUqvTkEycWHU+9IgIbypTqUlsCUljtjbYYWPe0dOopLpTWFo21OxQHxtAIfDNn6xAelUapVTGttAqz3Mm/la5ohYh6PTkFb96SVRxd4MMj2OOWSSRCam15Mzw7TZAKWEPyJQvhCLLhLPJVixk2qhx6LhGX1RX8TjpM8VsVZenCeFmx+vx2a/Hd28afEi18=&lt;/diagram&gt;&lt;/mxfile&gt;'
+      >
+        <a href="index.html">
+          <defs />
+          <g>
+            <rect
+              x="0"
+              y="0"
+              width="271"
+              height="70"
+              fill="none"
+              stroke="none"
+              pointer-events="all"
+            />
+            <g transform="translate(-0.5 -0.5)">
+              <switch>
+                <foreignObject
+                  pointer-events="none"
+                  width="100%"
+                  height="100%"
+                  requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+                  style="overflow: visible; text-align: left"
+                  ><div
+                    xmlns="http://www.w3.org/1999/xhtml"
+                    style="
+                      display: flex;
+                      align-items: unsafe center;
+                      justify-content: unsafe center;
+                      width: 269px;
+                      height: 1px;
+                      padding-top: 35px;
+                      margin-left: 1px;
+                    "
+                  >
+                    <div
+                      data-drawio-colors="color: rgb(0, 0, 0); "
+                      style="
+                        box-sizing: border-box;
+                        font-size: 0px;
+                        text-align: center;
+                      "
+                    >
+                      <div
+                        style="
+                          display: inline-block;
+                          font-size: 30px;
+                          font-family: Helvetica;
+                          color: rgb(0, 0, 0);
+                          line-height: 1;
+                          pointer-events: all;
+                          white-space: normal;
+                          overflow-wrap: normal;
+                        "
+                      >
+                        TheCodingBarista
+                      </div>
+                    </div>
+                  </div></foreignObject
+                >
+                <text
+                  x="136"
+                  y="43"
+                  fill="rgb(0, 0, 0)"
+                  font-family="Helvetica"
+                  font-size="27px"
+                  text-anchor="middle"
+                >
+                  TheCodingBarista
+                </text>
+              </switch>
+            </g>
+          </g>
+        </a>
+        <switch>
+          <g
+            requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+          />
+          <a
+            transform="translate(0,-5)"
+            xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems"
+            target="_blank"
+          >
+            <text text-anchor="middle" font-size="5pcpx" x="50%" y="100%">
+              Text is not SVG - cannot display
+            </text>
+          </a>
+        </switch>
+      </svg>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark text-decoration-none" href="#about">About</a>
+        <a class="p-2 text-dark text-decoration-none" href="#pricing"
+          >Service & Pricing</a
+        >
+        <a class="p-2 text-dark text-decoration-none" href="#testimonials"
+          >Testimonials</a
+        >
+        <!-- <a class="p-2 text-dark" href="#">Pricing</a> -->
+        <a class="btn btn-outline-primary" href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1>I am TheCodingBarista</h1>
+        <p>And I'm a Developer</p>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div id="about" class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="display-3 fw-light">About Me</h1>
+          <p class="lead text-muted">
+            Junior Developer with one plus years experience in Web Development,
+            seeking exciting new opportunities related to Fullstack, Software
+            Development & Data Analytics where I am able to learn from industry
+            professionals and use my skills to add value to the company.
+          </p>
+          <p>
+            <a href="#pricing" class="btn btn-primary my-2"
+              >Service & Pricing</a
+            >
+            <a href="#contact" class="btn btn-secondary my-2">Contact</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services & Pricing -->
+    <div id="pricing" class="container py-3 mb-5">
+      <header>
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+          <h1 class="display-4 fw-normal">Service & Pricing</h1>
+          <p class="fs-5 text-muted">The services I offer with their prices</p>
+        </div>
+      </header>
+
+      <main>
+        <div class="row row-cols-1 row-cols-md-2 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Free</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">$50</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>3 Pages</li>
+                  <li>1 Month Support</li>
+                  <li class="text-light">a</li>
+                  <li class="text-light">a</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Pro</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">$100</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>6 Pages</li>
+                  <li>2 Month Support</li>
+                  <li>E-Commerce Website</li>
+                  <li>Whatsapps Contact</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Testimonials -->
+    <div id="testimonials" class="mt-5">
+      <div class="row g-0 d-flex justify-content-center">
+        <div class="col-md-10 col-xl-8 text-center">
+          <h4 class="display-4 mt-4 mb-5 fw-normal">Testimonials</h4>
+        </div>
+      </div>
+
+      <div class="row g-0 text-center mt-3">
+        <div class="col-md-6 mb-5 mb-md-0">
+          <div class="d-flex justify-content-center mb-4">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+              class="rounded-circle shadow-1-strong"
+              width="150"
+              height="150"
+            />
+          </div>
+          <h5 class="mb-3">Maria Smantha</h5>
+          <h6 class="text-primary mb-3">Business Owner</h6>
+          <p class="px-xl-3">
+            <i class="fas fa-quote-left pe-2"></i>Provided good quality websites
+            in a timely manner
+          </p>
+          <ul class="list-unstyled d-flex justify-content-center mb-0">
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star-half-alt fa-sm text-warning"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 mb-5 mb-md-0">
+          <div class="d-flex justify-content-center mb-4">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
+              class="rounded-circle shadow-1-strong"
+              width="150"
+              height="150"
+            />
+          </div>
+          <h5 class="mb-3">Lisa Cudrow</h5>
+          <h6 class="text-primary mb-3">Graphic Designer</h6>
+          <p class="px-xl-3">
+            <i class="fas fa-quote-left pe-2"></i>Amazing work, highly recommed
+            if you need a quick responsive website
+          </p>
+          <ul class="list-unstyled d-flex justify-content-center mb-0">
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+            <li>
+              <i class="fas fa-star fa-sm text-warning"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+      <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+          <h1 class="display-4 fw-bold lh-1 mb-3">
+            Get in touch for a FREE quotation
+          </h1>
+          <p class="col-lg-10 fs-4">
+            Fill out the form, and get a reply in 24 hours
+          </p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5" id="contact">
+          <form
+            class="p-4 p-md-5 border rounded-3 bg-light"
+            action="https://formspree.io/f/xqkjyjap"
+            method="POST"
+          >
+            <div class="form-floating mb-3">
+              <input
+                type="Name"
+                class="form-control"
+                id="floatingName"
+                placeholder="John Doe"
+                name="name"
+              />
+              <label for="floatingName">Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="Email"
+                class="form-control"
+                id="floatingEmail"
+                placeholder="johndoe@email.com"
+                name="email"
+              />
+              <label for="floatingEmail">Email</label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">
+              Get in Touch
+            </button>
+            <hr class="my-4" />
+            <small class="text-muted"
+              >By clicking Sign up, you agree to the terms of use.</small
+            >
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container">
+      <footer>
+        <p class="text-center text-muted">© 2022 TheCodingBarista</p>
+      </footer>
+    </div>
+  </body>
+</html>
